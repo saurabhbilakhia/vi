@@ -1,0 +1,21 @@
+{
+  "name": "valueinvesting",
+  "version": "0.0.0",
+  "description": "End of day tracker",
+  "main": "src/server/app.js",
+  "engine": "node >= 8.9.1",
+  "scripts": {
+    "fullrebuild": "npm install",
+    "start": "node src/server/app.js"
+  },
+  "author": "Saurabh Bilakhia",
+  "license": "proprietary",
+  "dependencies": {
+    "request": "2.88.0",
+    "aws-sdk": "2.382.0",
+    "body-parser": "1.18.3",
+    "chalk": "2.4.1",
+    "mysql": "2.16.0",
+    "parse-json": "4.0.0"
+  }
+}
