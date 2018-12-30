@@ -5,7 +5,7 @@
   "main": "src/server/app.js",
   "engine": "node >= 8.9.1",
   "scripts": {
-    "fullrebuild": "npm install",
+    "build": "npm install",
     "start": "node src/server/app.js"
   },
   "author": "Saurabh Bilakhia",
