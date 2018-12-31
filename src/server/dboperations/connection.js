@@ -9,10 +9,10 @@ module.exports = {
 }
 
 var connection = mysql.createConnection({
-    host     : "valueinvestingdevdb.cdu3sla5f5lz.us-east-1.rds.amazonaws.com",
-    user     : "sbilakhia",
-    password : "Value!nve$ting",
-    port     : 3306
+    host     : process.env.aws_rds_host,
+    port     : process.env.aws_rds_port,
+    user     : process.env.aws_rds_user,
+    password : process.env.aws_rds_password
 });
 
 function getConnection() {
