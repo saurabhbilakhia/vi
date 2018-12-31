@@ -8,14 +8,13 @@ module.exports = {
     getConnection
 }
 
-var connection = mysql.createConnection({
-    host     : process.env.aws_rds_host,
-    port     : process.env.aws_rds_port,
-    user     : process.env.aws_rds_user,
-    password : process.env.aws_rds_password
-});
-
 function getConnection() {
+    var connection = mysql.createConnection({
+        host     : process.env.aws_rds_host,
+        port     : process.env.aws_rds_port,
+        user     : process.env.aws_rds_user,
+        password : process.env.aws_rds_password
+    });
     return new Promise(function(resolve, reject) {
         connection.connect(function(error) {
             if(error) { 

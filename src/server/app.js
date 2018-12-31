@@ -4,6 +4,13 @@ const log = console.log
 const crud = require('./dboperations/crud')
 const parseJson = require('parse-json');
 const dbOperation = require('./dboperations/connection')
+const dotenv = require('dotenv');
+const result = dotenv.config();
+
+log(process.env.aws_rds_host)
+log(process.env.aws_rds_port)
+log(process.env.aws_rds_user)
+log(process.env.aws_rds_password)
 
 const configs = [
 {"category": "mostActive", "url": "https://api.iextrading.com/1.0/stock/market/list/mostactive"},
