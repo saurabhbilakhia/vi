@@ -23,6 +23,7 @@ async function startExec() {
                 log.error('app : request : '+error)
             } else {
                 log.info('app : Status Code : '+response.statusCode)
+                log.info('app : Config category: '+config.category)
                 log.info('app : Response Body : '+body)
                 crud.insert(config.category, parseJson(body), connection)
             }
