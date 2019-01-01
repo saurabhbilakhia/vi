@@ -16,11 +16,7 @@ fi
 environment=$1
 
 if [ "$environment" = "dev" ]; then
-        NODE_ENV=development
-        echo $0: Running $environment configuration
+        NODE_ENV=development node src/server/app.js
 elif [ "$environment" = "prod" ]; then
-        NODE_ENV=production
-        echo $0: Running $environment configuration
+        NODE_ENV=production node src/server/app.js
 fi
-
-node src/server/app.js

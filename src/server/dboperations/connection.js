@@ -1,8 +1,7 @@
 'use strict'
 
 const mysql = require('mysql');
-const chalk = require('chalk');
-const log = console.log
+const log = require('./../logger')
 
 module.exports = {
     getConnection
@@ -17,12 +16,12 @@ function getConnection() {
     });
     return new Promise(function(resolve, reject) {
         connection.connect(function(error) {
-            if(error) { 
-                log(chalk.red('Error: ' + error))
+            if(error) {
+                log.error('connection : dbconnect : '+error)
                 reject(error)
             }
             else {
-                log("connection successful")
+                log.info('connection : dbconnection successful')
                 resolve(connection)
             }
         })
