@@ -31,3 +31,8 @@ async function startExec() {
 }
 
 startExec();
+
+setTimeout((function() {
+    log.info("app : Exiting application !!!!!")
+    return process.exit(1);
+}), 30000);
