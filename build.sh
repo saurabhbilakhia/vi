@@ -1,10 +1,10 @@
 APP_NAME=vi
-APP_HOME=C:/dev/
+APP_HOME=$PWD
 
 echo /////////////////////////////
 echo /// Starting build script ///
 echo /////////////////////////////
 
-cd $APP_HOME/$APP_NAME
+cd $APP_HOME
 
 npm run build
