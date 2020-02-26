@@ -105,9 +105,9 @@ async function insert(category, records, connection) {
         )`, 
         function(error, result) {
             if(error) {
-                log.error('crud : insert : '+error)
+                log.error('iexmarketlist : insert : '+error)
             } else {
-                log.info('crud : insert successful')
+                log.info('iexmarketlist : insert successful')
             }
         })    
     })
